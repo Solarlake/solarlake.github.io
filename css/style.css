@@ -1,27 +1,105 @@
+@font-face {
+  font-family: 'Panchang-Bold';
+  src: url('Panchang-Bold.woff2') format('woff2'),
+       url('Panchang-Bold.woff') format('woff'),
+       url('Panchang-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+*::selection {
+  color: #ffffff;
+  background-color: #0c5cf7;
+}
+
 /* Set the scroll behavior to smooth so that when you click the in the header, the screen scrolls down rather than jumps */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Set the margin to 0 to make sure the page stretches all the way to the edge of the browser window. */
 body {
   margin: 0;
-  background-color: #d9dbdc;
+  background: #0c5cf7;  /* fallback for old browsers */
+  background-attachment: fixed;
 }
 
 header {
   text-align: left;
   /* border: 10px solid #ff0000; */
-  
-  background: #B2FEFA;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(210deg, #F1EBE5, #d9dbdc, #c2d9d9);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(210deg, #F1EBE5, #d9dbdc, #c2d9d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #0c5cf7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(150deg, #3ad8f4, #0c5cf7, #0c5cf7, #0c5cf7, #0c5cf7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(150deg, #3ad8f4, #0c5cf7, #0c5cf7, #0c5cf7, #0c5cf7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  background-attachment: fixed;
   font-family: 'IBM Plex Sans', sans-serif;
-  color: #101c19;
+  color: #ffffff;
   min-height: 100vh;
   /* min-width: 500px; */
+}
+
+h1 {
+  font-family: "Panchang-Bold", sans-serif;
+  font-weight: 800;
+  font-size: calc(1em + 5vw);
+  border-bottom: 1px solid;
+  text-align: center;
+  margin: 40px 0;
+  padding-bottom: 20px;
+  /* line-height: 1.3; */
+}
+
+h1::selection {
+  background-color: #ffffff;
+  color: #0c5cf7;
+}
+
+.bio {
+  margin: 40px 0;
+  color: #ffffff;
+  font-size: 32px;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.bio::selection {
+  background-color: #ffffff;
+  color: #0c5cf7;
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.myButton {
+  border-radius: 1000px;
+  cursor: pointer;
+  color: #ffffff;
+  border: 1px #ffffff solid;
+  background-color: #00000000;
+  font-size: 20px;
+  padding: 16px 31px;
+  text-decoration: none;
+  margin: 1.69em auto;
+  min-width: 200px;
+  text-align: center;
+}
+
+.myButton:hover {
+    background-color:#ffffff;
+    color: #0c5cf7;
+}
+
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+.myButton::selection {
+  background-color: #ffffff;
+  color: #0c5cf7;
 }
 
 img {
@@ -34,10 +112,12 @@ img {
 }
 
 .overlay {
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   position: absolute;
   pointer-events: none;
+  /* mix-blend-mode: screen; */
+  user-select: none;
 }
 
 main {
@@ -45,10 +125,11 @@ main {
   /* grid-template-columns: repeat(auto-fill, minmax(40%, 1fr) ) ; */
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
-  /* margin-top: 44px; */
   padding: 44px 40px;
-  /* background-color: #d9dbdc; */
   background-color: #ffffff;
+  backdrop-filter: blur(10px) saturate(50%) brightness(120%);
+
+  border-radius: 25px;
 
   justify-items: center;
   justify-content: center;
@@ -56,23 +137,35 @@ main {
   align-content: center;
 }
 
-h1 {
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: calc(1em + 3vw);
-  padding-bottom: .5em;
-  border-bottom: 1px solid;
-  /* line-height: 1.3; */
-}
-
 h2 {
   font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 800;
   letter-spacing: 0.3px;
   text-align: left;
-  color: #202831;
+  color: #0c5cf7;
   padding: 10px 0px 10px 10px;
+}
+
+h2::selection {
+  color: #ffffff;
+  background-color: #0c5cf7;
+}
+
+.description {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.29;
+  letter-spacing: 0.1px;
+  text-align: left;
+  color: #0c5cf7;
+  padding: 10px 0px 10px 10px;
+}
+
+.description::selection {
+  color: #ffffff;
+  background-color: #0c5cf7;
 }
 
 a {
@@ -91,85 +184,7 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.bio {
-  color: #101c19;
-  font-size: 24px;
-  font-family: 'IBM Plex Sans', sans-serif;
-}
 
-.buttonBox {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
-.myButton {
-  border-radius: 1000px;
-  cursor: pointer;
-  color: #101c19;
-  border: 1px #101c19 solid;
-  background-color: #00000000;
-  font-size: 20px;
-  padding: 16px 31px;
-  text-decoration: none;
-  margin: 1.69em auto;
-  min-width: 200px;
-  text-align: center;
-}
-
-.myButton:hover {
-    background-color:#101c19;
-    color: #d9dbdc;
-}
-
-.myButton:active {
-    position:relative;
-    top:1px;
-}
-
-.recipe {
-  /* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5); */
-  width: 100%;
-}
-
-.a {
-
-}
-
-.c {
-
-}
-
-.time {
-  padding-left: 10px;
-  padding-top: 10px;
-  width: 20px;
-  height: auto;
-}
-
-.mins {
-  display: inline-block;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  text-align: left;
-  color: #202831;
-  position: relative;
-  bottom: 5px;
-}
-
-.description {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.29;
-  letter-spacing: 0.1px;
-  text-align: left;
-  color: #202831;
-  padding: 10px 0px 10px 10px;
-  /* border-top: 1px solid #ff0000; */
-}
 
 .logo {
   width: 115px;
@@ -184,15 +199,43 @@ a {
 }
 
 footer {
-  padding-top: 44px;
-  background-color: #d9dbdc;
+  background-attachment: fixed;
+
+  padding: 20px 40px;
+}
+
+.copyright {
+  margin: 0 0;
+  font-family: "IBM Plex Sans", Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 18px;
+  display: inline;
+}
+
+.icons {
+  list-style-type: none;
+  display: inline-flex;
+}
+
+.icons a {
+  font-size: 18px;
+  margin: 0 8px;
+  color: #ffffff;
+}
+
+.icons .twitter:hover {
+  color: #11a1f2;
+}
+
+.icons .instagram:hover {
+  color: #dd1bd9;
 }
 
 /* ---------------------------------------------- */
 
-@media all and (max-width:1000px) {
+@media all and (max-width:1100px) {
   main {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .description {
@@ -200,7 +243,7 @@ footer {
   }
 
   img {
-    height: 25vh;
+    height: 35vh;
   }
 }
 
