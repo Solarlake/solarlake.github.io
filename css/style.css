@@ -30,8 +30,8 @@ header {
   text-align: left;
   /* border: 10px solid #ff0000; */
   background: #0c5cf7;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(150deg, #3ad8f4, #0c5cf7, #0c5cf7, #0c5cf7, #0c5cf7);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(150deg, #3ad8f4, #0c5cf7, #0c5cf7, #0c5cf7, #0c5cf7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(150deg, #590CF7, #0c5cf7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(150deg, #590CF7, #0c5cf7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   font-family: 'IBM Plex Sans', sans-serif;
   color: #ffffff;
