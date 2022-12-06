@@ -22,32 +22,47 @@ html {
 /* Set the margin to 0 to make sure the page stretches all the way to the edge of the browser window. */
 body {
   margin: 0;
-  background: #0c5cf7;  /* fallback for old browsers */
+  padding: 0;
+  background: #0c5cf7;
+  background: -webkit-linear-gradient(150deg, #590CF7, #0c5cf7);
+  background: linear-gradient(150deg, #590CF7, #0c5cf7);
   background-attachment: fixed;
 }
 
-header {
-  text-align: left;
-  /* border: 10px solid #ff0000; */
-  background: #0c5cf7;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(150deg, #590CF7, #0c5cf7);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(150deg, #590CF7, #0c5cf7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: #0c5cf7;
+  background: -webkit-linear-gradient(150deg, #590CF7, #0c5cf7);
+  background: linear-gradient(150deg, #590CF7, #0c5cf7);
+  
 
   font-family: 'IBM Plex Sans', sans-serif;
   color: #ffffff;
-  min-height: 100vh;
-  /* min-width: 500px; */
+  height: 100vh;
+}
+
+.overlay {
+  background-image: url(/images/cubes_blue.png);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
+  width: 43%;
   font-family: "Panchang-Bold", sans-serif;
   font-weight: 800;
   font-size: calc(1em + 5vw);
   border-bottom: 1px solid;
   text-align: center;
-  margin: 40px 0;
+  margin: 0;
   padding-bottom: 20px;
-  /* line-height: 1.3; */
 }
 
 h1::selection {
@@ -102,22 +117,16 @@ h1::selection {
   color: #0c5cf7;
 }
 
+iframe {
+  border-radius: 20px;
+}
+
 img {
   width: 100%;
   /* height: auto; */
-
   border-radius: 20px;
-  height: 50vh;
+  height: 40vh;
   object-fit: cover;
-}
-
-.overlay {
-  /* width: 100vw; */
-  height: 100vh;
-  position: absolute;
-  pointer-events: none;
-  /* mix-blend-mode: screen; */
-  user-select: none;
 }
 
 main {
@@ -169,33 +178,29 @@ h2::selection {
 }
 
 a {
-  text-decoration: none;
+  color: #0c5cf7;
 }
 
 .wrapper {
   /* max-width: 1150px; */
-  max-width: 100%;
-  margin: auto;
+  width: 100%;
+  height: 100%;
+  /* margin: 20%; */
   /* padding: 50px; */
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* display: block; */
+  display: flex-column;
+  align-items: center;
+  justify-content: center;
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
 }
-
-
 
 .logo {
   width: 115px;
   height: 21.1px;
   object-fit: contain;
   padding: 20px;
-}
-
-.container {
-  /* min-width: 500px; */
-  margin: auto;
 }
 
 footer {
