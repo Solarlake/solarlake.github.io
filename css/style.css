@@ -55,7 +55,6 @@ body {
 }
 
 h1 {
-  width: 43%;
   font-family: "Panchang-Bold", sans-serif;
   font-weight: 800;
   font-size: calc(1em + 5vw);
@@ -71,7 +70,7 @@ h1::selection {
 }
 
 .bio {
-  margin: 40px 0;
+  margin: 40px 20px;
   color: #ffffff;
   font-size: 32px;
   font-family: 'IBM Plex Sans', sans-serif;
@@ -97,9 +96,9 @@ h1::selection {
   font-size: 20px;
   padding: 16px 24px;
   text-decoration: none;
-  /* margin: 1.69em auto; */
   min-width: 200px;
   text-align: center;
+  margin: 0 20px;
 }
 
 .myButton:hover {
@@ -245,6 +244,10 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
+  .bio {
+    font-size: 24px;
+  }
+
   .description {
     font-size: 18px;
   }
@@ -255,6 +258,10 @@ footer {
 
   img {
     height: 35vh;
+  }
+
+  .myButton {
+    min-width: 150px;
   }
 }
 
@@ -263,6 +270,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .bio {
+    font-size: 18px;
+  }
+
   .description {
     font-size: 18px;
   }
@@ -273,5 +284,9 @@ footer {
 
   img {
     height: 25vh;
+  }
+
+  .myButton {
+    min-width: 100px;
   }
 }
